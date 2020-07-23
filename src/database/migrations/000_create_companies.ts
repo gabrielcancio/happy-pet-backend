@@ -5,7 +5,6 @@ export async function up(knex: Knex) {
         table.uuid('id').primary();
         table.string('name').unique().notNullable();
         table.string('email').unique().notNullable();
-        table.string('image').notNullable();
         table.string('password_hash').notNullable();
 
         table.timestamp('created_at').defaultTo(knex.fn.now());
